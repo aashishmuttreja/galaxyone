@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://resources.crowdtwist.com/v259/widgets/javascripts/widgets-sdk.0.3.0.js"></script>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://vogie-stems.000webhostapp.com/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="https://vogie-stems.000webhostapp.com/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://vogie-stems.000webhostapp.com/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://vogie-stems.000webhostapp.com/CSS/Main-CSS.css" />
+    <link rel="stylesheet" type="text/css" href="https://vogie-stems.000webhostapp.com/CSS/Animation.css" />
+	 <script src="https://vogie-stems.000webhostapp.com/JS/settings.js"></script>
+    <script>
+        /**
+         * Initialize the SDK and set a name for it which will be used to
+         * refer it, and call its APIs.
+         */
+        function initSdk(name) {
+            // Default name is Bots
+            if (!name) {
+                name = 'Bots';
+            }
+            setTimeout(() => {
+                if (clientAuthEnabled) {
+                    window[name] = new WebSDK(chatWidgetSettings, generateToken);
+                } else {
+                    window[name] = new WebSDK(chatWidgetSettings);
+                }
+                window[name].connect()
+                    .then(() => {
+                        console.log("Connection Successful");
+                    })
+                    .catch((reason) => {
+                        console.log("Connection failed");
+                        console.log(reason);
+                    });
+            });
+        }
+    </script>
+    <script src="https://vogie-stems.000webhostapp.com/JS/web-sdk.js" onload="initSdk('Bots')"></script> 
+   
+</head>
+
+<body class="no-margin no-padding">
+   
+   <nav class="main-header">
+            <div class="main-navigation">
+                <li><a>Personal</a></li>
+                <li><a>Corporate</a></li>
+                <li><a>HDBank Priority</a></li>
+                <li><a>Investors</a></li>
+                <li><a>About HDBank</a></li>
+                <li><a>News</a></li>
+                <li><a>Cashback Deals</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>Careers</a></li>
+                <li><a>Help</a></li>
+            </div>
+            <div class="main-right">
+                <img src="https://vogie-stems.000webhostapp.com/images/notification.png" class="notification">
+                <div class="search-container">
+                    <input type="text" id="search-bar" placeholder="What can I help you with today?">
+                    <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                </div>
+            </div>
+        </nav>
+		
+		
+		<nav>
+            <img src="https://vogie-stems.000webhostapp.com/images/logo.png" class="logo">
+            <div class="header-nav">
+                <div class="login-button">Login</div>
+                <ul class="SR-CreateSR-List">
+                    <li class="retail-click">Retail Customer</li>
+                    <li class="corporate-click">Corporate Customer</li>
+                </ul>
+            </div>
+        </nav>
+   
+   
+   <div class="ct-widget" data-widget-id="15344" data-src="https://ascent7-widgets.crowdtwist.com/widgets/t/account-overview-two/15344"></div>
+   
+   <div class="ct-widget" data-widget-id="14294" data-src="https://ascent7-widgets.crowdtwist.com/widgets/t/activity-list/14294"></div>
+   
+</body>
+
+</html>
